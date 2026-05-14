@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Works — Mohammed Elmourad</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+
+<style>
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  :root {
+    --cream: #FAF7F2;
+    --charcoal: #1C1C1A;
+    --charcoal-mid: #3A3A37;
+    --charcoal-light: #6B6B66;
+    --amber: #E07B2A;
+    --border: rgba(28,28,26,0.12);
+
+    --serif: 'Playfair Display', serif;
+    --sans: 'DM Sans', sans-serif;
+    --mono: 'DM Mono', monospace;
+  }
+
+  body {
+    background: var(--cream);
+    color: var(--charcoal);
+    font-family: var(--sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 1.25rem 4rem;
+
+    background: rgba(250,247,242,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 0.5px solid var(--border);
+  }
+
+  .nav-logo {
+    text-decoration: none;
+    color: var(--charcoal);
+    font-family: var(--serif);
+    font-size: 1.1rem;
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2.5rem;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: var(--charcoal-light);
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: color 0.2s ease;
+  }
+
+  .nav-links a:hover {
+    color: var(--amber);
+  }
+
+  .hero {
+    padding: 10rem 4rem 4rem;
+  }
+
+  .hero-eyebrow {
+    font-family: var(--mono);
+    color: var(--amber);
+    font-size: 0.78rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+  }
+
+  h1 {
+    font-family: var(--serif);
+    font-size: clamp(3rem, 7vw, 6rem);
+    line-height: 1;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero p {
+    max-width: 650px;
+    color: var(--charcoal-mid);
+    line-height: 1.8;
+    font-weight: 300;
+  }
+
+  .gallery {
+    padding: 0 4rem 5rem;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.25rem;
+  }
+
+  .media-card {
+    position: relative;
+    overflow: hidden;
+    background: #ddd;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+
+  .media-card img,
+  .media-card video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+  }
+
+  .media-card:hover img,
+  .media-card:hover video {
+    transform: scale(1.03);
+  }
+
+  .media-card video {
+    aspect-ratio: 4/5;
+  }
+
+  .media-card img {
+    aspect-ratio: 4/5;
+  }
+
+  .video-indicator {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+
+    background: rgba(0,0,0,0.72);
+    color: white;
+
+    padding: 0.4rem 0.7rem;
+    border-radius: 999px;
+
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-family: var(--mono);
+  }
+
+    .lightroom-indicator {
+        position: absolute;
+        bottom: 3rem;
+        right: 1rem;
+
+        background: rgba(0,0,0,0.72);
+        color: white;
+
+        padding: 0.4rem 0.7rem;
+        border-radius: 999px;
+
+        font-size: 0.7rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-family: var(--mono);
+    }
+
+
+    .adobePremier-indicator {
+    position: absolute;
+    bottom: 3rem;
+    right: 1rem;
+
+    background: rgba(0,0,0,0.72);
+    color: white;
+
+    padding: 0.4rem 0.7rem;
+    border-radius: 999px;
+
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-family: var(--mono);
+  }
+
+    .sony-indicator {
+    position: absolute;
+    bottom: 1rem;
+    right: 5rem;
+
+    background: rgba(0,0,0,0.72);
+    color: white;
+
+    padding: 0.4rem 0.7rem;
+    border-radius: 999px;
+
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-family: var(--mono);
+    }
+
+    .photo-indicator {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+
+    background: rgba(0,0,0,0.72);
+    color: white;
+
+    padding: 0.4rem 0.7rem;
+    border-radius: 999px;
+
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-family: var(--mono);
+    }
+  .lightbox {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(10,10,10,0.96);
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 1000;
+
+    padding: 2rem;
+  }
+
+  .lightbox.active {
+    display: flex;
+  }
+
+  .lightbox-content {
+    max-width: 95vw;
+    max-height: 92vh;
+  }
+
+  .lightbox img,
+  .lightbox video {
+    max-width: 95vw;
+    max-height: 92vh;
+    object-fit: contain;
+    border-radius: 4px;
+  }
+
+  .lightbox video {
+    background: black;
+  }
+
+  .close-btn {
+    position: fixed;
+    top: 1.5rem;
+    right: 1.5rem;
+
+    width: 46px;
+    height: 46px;
+
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.25);
+
+    background: transparent;
+    color: white;
+
+    font-size: 1.4rem;
+    cursor: pointer;
+  }
+
+  .close-btn:hover {
+    background: rgba(255,255,255,0.08);
+  }
+
+  @media (max-width: 900px) {
+    nav,
+    .hero,
+    .gallery {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+
+    .hero {
+      padding-top: 8rem;
+    }
+
+    .gallery {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Mohammed Elmourad</a>
+
+  <ul class="nav-links">
+    <li><a href="portfolio-penny-appeal.html">Home</a></li>
+    <li><a href="works.html">Portfolio</a></li>
+    
+  </ul>
+</nav>
+
+<section class="hero">
+  <p class="hero-eyebrow">Selected Visual Work</p>
+
+  <h1>Photography,<br>film & visual storytelling.</h1>
+
+  <p>
+    A growing archive of cinematic visuals, documentary moments, creative direction and social-first storytelling.
+  </p>
+</section>
+
+<section class="gallery">
+
+  <!-- Quran IMAGE -->
+  <div class="media-card" onclick="openImage('quranPhoto.jpg')">
+    <img src="https://drive.google.com/file/d/1wS9W3Ip9Bc1hYIuyEDtzh6YaJfOOkLRi/view?usp=sharing" alt="Hosted Image">
+
+    <!-- <img src="quranPhoto.jpg" alt="Work Image"> -->
+    <div class="lightroom-indicator">Edited In Lightroom</div>
+    <div class="photo-indicator">Photo</div>
+    
+  </div>
+  
+  
+
+  <!-- 5Before5 VIDEO -->
+  <div class="media-card" onclick="openVideo('Sequence 01_2.MP4')">
+    <video muted playsinline preload="metadata">
+      <source src="Sequence 01_2.MP4" type="video/mp4">
+    </video>
+
+    <div class="video-indicator">Video</div>
+    <div class="adobePremier-indicator">Edited In Adobe Premiere</div>
+    <div class="sony-indicator">Sony A7iii</div>
+
+</div>
+
+<!-- humanAppeal Poster -->
+
+    <div class="media-card" onclick="openImage('DSC06195.JPG')">
+    <!-- <img src="DSC06195.JPG" alt="Work Image"> -->
+    <img src="https://drive.google.com/file/d/1o9JknkXuqfl9X1mK6X_HcnvUzdCG-g9E/view?usp=drive_link" alt="Hosted Image">
+
+    <div class="sony-indicator">Sony A7iii</div>
+    <div class="photo-indicator">Photo</div>
+    
+    </div>
+
+<!-- HaStall -->
+  <div class="media-card" onclick="openImage('DSC06183.JPG')">
+    <img src="DSC06183.JPG" alt="Work Image">
+        <div class="sony-indicator">Sony A7iii</div>
+    <div class="photo-indicator">Photo</div>
+  </div>
+
+
+  <!-- pebbles IMAGE -->
+  <div class="media-card" onclick="openImage('catPhoto.JPG')">
+    <img src="catPhoto.JPG" alt="Work Image">
+    <div class="sony-indicator">Sony A7iii</div>
+    <div class="photo-indicator">Photo</div>
+    <div class="lightroom-indicator">Edited In Lightroom</div>
+
+  </div>
+
+  <!-- Bassem VIDEO -->
+  <div class="media-card" onclick="openVideo('bassVide.MP4')">
+    <video muted playsinline preload="metadata">
+      <source src="bassVide.MP4" type="video/mp4">
+    </video>
+
+    <div class="video-indicator">Video</div>
+
+    <div class="adobePremier-indicator">Edited In Adobe Premiere</div>
+    <div class="sony-indicator">Sony A7iii</div>
+  </div>
+
+  <!-- Bassem VIDEO2 -->
+  <div class="media-card" onclick="openVideo('bassVeo2.MP4')">
+    <video muted playsinline preload="metadata">
+      <source src="bassVeo2.MP4" type="video/mp4">
+    </video>
+    <div class="video-indicator">Video</div>
+
+    <div class="adobePremier-indicator">Edited In Adobe Premiere</div>
+    <div class="sony-indicator">Sony A7iii</div>
+  
+    
+</div>
+
+<!-- Valentino IMAGE -->
+<div class="media-card" onclick="openImage('File_003.JPEG')">
+  <img src="File_003.JPEG" alt="Work Image">
+  <div class="lightroom-indicator">Edited In Lightroom</div>
+  <div class="sony-indicator">Sony A7iii</div>
+    <div class="photo-indicator">Photo</div>
+
+
+
+  </div>
+
+ <!-- LWM Poster -->
+  <div class="media-card" onclick="openImage('learn with me ramadan flyer.png')">
+    <img src="learn with me ramadan flyer.png" alt="Work Image">
+      <div class="lightroom-indicator">Made In Canva</div>
+  <div class="sony-indicator">Sony A7iii</div>
+    <div class="photo-indicator">Photo</div>
+</div>
+
+ <!-- expCarrousel Poster -->
+  <div class="media-card" onclick="openImage('lScreenshot 2026-05-14 at 4.54.43 pm.png')">
+    <img src="Screenshot 2026-05-14 at 4.54.43 pm.png" alt="Work Image">
+  <div class="lightroom-indicator">Edited In Photoshop</div>
+
+    <div class="photo-indicator">Instagram Carousell</div>  
+
+</div>
+
+
+  
+
+</section>
+
+<div class="lightbox" id="lightbox">
+  <button class="close-btn" onclick="closeLightbox()">×</button>
+
+  <div class="lightbox-content" id="lightbox-content"></div>
+</div>
+
+<script>
+  const lightbox = document.getElementById('lightbox');
+  const lightboxContent = document.getElementById('lightbox-content');
+
+  function openImage(src) {
+    lightbox.classList.add('active');
+
+    lightboxContent.innerHTML = `
+      <img src="${src}" alt="Expanded Image">
+    `;
+  }
+
+  function openVideo(src) {
+    lightbox.classList.add('active');
+
+    lightboxContent.innerHTML = `
+      <video controls autoplay playsinline>
+        <source src="${src}" type="video/mp4">
+      </video>
+    `;
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove('active');
+
+    lightboxContent.innerHTML = '';
+  }
+
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+      closeLightbox();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeLightbox();
+    }
+  });
+</script>
+
+</body>
+</html>

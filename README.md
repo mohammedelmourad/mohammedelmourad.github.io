@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta property="og:image" content="Mohammed Elmourad.jpg" />
+<meta property="og:url" content="https://mohammedelmourad.github.io/portfolio-penny-appeal.html" />
+<meta property="og:image" content="MohammedElmourad.jpg" />
 <meta name="description" content="Mohammed Elmourad | Sydney-based content creator, photographer, and videographer specialising in shortform video, social media content, and brand design for charities and businesses.">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mohammed Elmourad — Media & Content Portfolio</title>

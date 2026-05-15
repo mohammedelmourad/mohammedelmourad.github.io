@@ -3,12 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mohammed Elmourad — Media & Content Portfolio</title>
-<meta name="description" content="Mohammed Elmourad is a Sydney-based content creator, photographer, and videographer specialising in shortform video, social media content, and brand design for charities and businesses.">
+<title>Mohammed Elmourad — Portfolio</title>
+<meta name="description" content="Mohammed Elmourad — Sydney-based content creator, photographer, and videographer. Shortform video, social media content, and brand design with a focus on purpose-driven visual storytelling.">
 <meta name="author" content="Mohammed Elmourad">
-<meta property="og:title" content="Mohammed Elmourad — Media & Content Portfolio">
-<meta property="og:description" content="Sydney-based content creator, photographer, and videographer. Shortform video, social media content, and brand design with a focus on purpose-driven storytelling.">
+<meta property="og:title" content="Mohammed Elmourad — Portfolio">
+<meta property="og:description" content="Sydney-based content creator, photographer, and videographer. Shortform video, social media content, and brand design.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://mohammedelmourad.github.io/">
+<meta property="og:image" content="https://mohammedelmourad.github.io/Mohammed%20Elmourad.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mohammed Elmourad — Portfolio">
+<meta name="twitter:description" content="Sydney-based content creator, photographer, and videographer.">
+<meta name="twitter:image" content="https://mohammedelmourad.github.io/Mohammed%20Elmourad.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
@@ -794,7 +800,6 @@
     <li><a href="#work" onclick="closeMenu()">Work</a></li>
     <li><a href="#skills" onclick="closeMenu()">Skills</a></li>
     <li><a href="#experience" onclick="closeMenu()">Experience</a></li>
-    <li><a href="#why" onclick="closeMenu()">Why Penny Appeal</a></li>
     <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
     <li><a href="works.html" onclick="closeMenu()">Portfolio</a></li>
   </ul>
@@ -805,7 +810,7 @@
 
 <!-- HERO -->
 <section class="hero">
-  <p class="hero-eyebrow">Media & Content Portfolio</p>
+  <p class="hero-eyebrow">Portfolio · Sydney, Australia</p>
   <h1>Visual stories<br>that move <em>people</em><br>to act.</h1>
   <p class="hero-bio">
     I'm a content creator, photographer, and videographer based in Sydney. I combine technical craft with a genuine understanding of purpose-driven storytelling — helping organisations communicate their mission with clarity and impact.
@@ -840,7 +845,7 @@
         I understand what it takes to produce content that reaches people where they are — on social feeds, in campaign videos, and in the moments that prompt them to give. I shoot on a Sony A7III and edit across DaVinci Resolve and the Adobe suite, with a particular eye for colour and composition that reflects the dignity of the subjects I work with.
       </p>
       <p>
-        I'm also deeply aligned with the values that underpin Penny Appeal's mission. This isn't just a media job to me — it's an opportunity to put my skills in service of something that genuinely matters.
+        I'm also driven by content that genuinely matters — work that doesn't just look good, but moves people, builds trust, and helps brands and causes connect with the people they exist for.
       </p>
     </div>
   </div>
@@ -999,41 +1004,15 @@
   </div>
 </section>
 
-<!-- WHY PENNY APPEAL -->
-<section id="why" class="why-section">
-  <div class="section-header fade-up">
-    <span class="section-num">05</span>
-    <h2>Why Penny Appeal</h2>
-  </div>
-  <div class="why-inner fade-up">
-    <div class="why-quote">"</div>
-    <div>
-      <p class="why-body">
-        Penny Appeal's work sits at the intersection of two things I care deeply about — the power of visual media to change minds, and the Islamic imperative to serve those in need. I want to create content that doesn't just raise funds, but raises the dignity of the people your campaigns are about.
-      </p>
-      <p class="why-note">
-        I've worked on charity ground operations with Human Appeal, seen first-hand how storytelling affects a donor's decision in real time, and spent years building the technical skills to execute those stories at a high level. I'm not coming to Penny Appeal to learn the basics — I'm coming to apply everything I've built, for a cause I believe in completely.
-      </p>
-      <p class="why-note">
-        My goal in this meeting is simple: to show you that I can deliver content worthy of your mission — and that I'm ready to start immediately.
-      </p>
-    </div>
-  </div>
-</section>
-
 <!-- CONTACT -->
 <section id="contact" class="contact-section">
   <div class="contact-inner">
     <div class="contact-left">
       <h2>Let's create<br>something meaningful.</h2>
       <div class="contact-links">
-        <a href="mailto:melmourad143@gmail.com">
+        <a href="mailto:mohammed.elmourad01@gmail.com">
           <span class="label">Email</span>
-          melmourad143@gmail.com
-        </a>
-        <a href="tel:+61431554559">
-          <span class="label">Phone</span>
-          0431 554 559
+          mohammed.elmourad01@gmail.com
         </a>
       </div>
     </div>

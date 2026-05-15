@@ -153,43 +153,61 @@
     transform: scale(1.04);
   }
 
-  /* Video cards — no video element in grid, just a styled placeholder */
+  /* Video cards — thumbnail image with play button overlay */
   .video-thumb {
     width: 100%;
     aspect-ratio: 4/5;
-    background: linear-gradient(160deg, #2a2a28 0%, #1a1a18 100%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    transition: background 0.3s;
+    position: relative;
+    overflow: hidden;
+    background: #1a1a18;
   }
 
-  .media-card.video:hover .video-thumb {
-    background: linear-gradient(160deg, #3a3a37 0%, #2a2a28 100%);
+  .video-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease, filter 0.3s;
+    filter: brightness(0.78);
+  }
+
+  .media-card.video:hover .video-thumb img {
+    transform: scale(1.04);
+    filter: brightness(0.6);
+  }
+
+  .play-btn-wrap {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
   }
 
   .play-btn {
     width: 64px;
     height: 64px;
     border-radius: 50%;
-    border: 1.5px solid rgba(250,247,242,0.4);
+    border: 1.5px solid rgba(250,247,242,0.9);
+    background: rgba(0,0,0,0.35);
+    backdrop-filter: blur(6px);
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: border-color 0.3s, transform 0.3s;
+    transition: border-color 0.3s, transform 0.3s, background 0.3s;
   }
 
   .media-card.video:hover .play-btn {
     border-color: var(--amber);
+    background: rgba(0,0,0,0.5);
     transform: scale(1.08);
   }
 
   .play-btn svg {
     width: 22px;
     height: 22px;
-    fill: rgba(250,247,242,0.85);
+    fill: #fff;
     margin-left: 3px;
     transition: fill 0.3s;
   }
@@ -403,10 +421,13 @@
 
 <!-- NAV -->
 <nav>
-  <a href="portfolio-penny-appeal.html" class="nav-logo">Mohammed Elmourad</a>
+  <a href="index.html" class="nav-logo">Mohammed Elmourad</a>
   <ul class="nav-links" id="nav-links">
-    <li><a href="portfolio-penny-appeal.html" onclick="closeMenu()">Home</a></li>
-    <li><a href="works.html" class="active" onclick="closeMenu()">Works</a></li>
+    <li><a href="index.html#work" onclick="closeMenu()">Work</a></li>
+    <li><a href="index.html#skills" onclick="closeMenu()">Skills</a></li>
+    <li><a href="index.html#experience" onclick="closeMenu()">Experience</a></li>
+    <li><a href="index.html#contact" onclick="closeMenu()">Contact</a></li>
+    <li><a href="works.html" class="active" onclick="closeMenu()">Portfolio</a></li>
   </ul>
   <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
     <span></span><span></span><span></span>
@@ -438,10 +459,12 @@
   <!-- 5Before5 — Video -->
   <div class="media-card video" onclick="openVideo('Sequence 01_2_1_1.mp4')">
     <div class="video-thumb">
-      <div class="play-btn">
-        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      <img src="thumb-mendatory.jpg" alt="Mendatory 2026 video thumbnail">
+      <div class="play-btn-wrap">
+        <div class="play-btn">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        </div>
       </div>
-      <span class="video-label">Play video</span>
     </div>
     <div class="card-label">
       <span class="card-client">5Before5</span>
@@ -493,10 +516,12 @@
   <!-- Bassem Video 1 -->
   <div class="media-card video" onclick="openVideo('bassVide_1.mp4')">
     <div class="video-thumb">
-      <div class="play-btn">
-        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      <img src="thumb-wink.jpg" alt="Exponential Education video thumbnail">
+      <div class="play-btn-wrap">
+        <div class="play-btn">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        </div>
       </div>
-      <span class="video-label">Play video</span>
     </div>
     <div class="card-label">
       <span class="card-client">Exponential Education</span>
@@ -511,10 +536,12 @@
   <!-- Bassem Video 2 -->
   <div class="media-card video" onclick="openVideo('bassVeo2_1.mp4')">
     <div class="video-thumb">
-      <div class="play-btn">
-        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      <img src="thumb-exponentially.jpg" alt="Exponential Education classroom video thumbnail">
+      <div class="play-btn-wrap">
+        <div class="play-btn">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        </div>
       </div>
-      <span class="video-label">Play video</span>
     </div>
     <div class="card-label">
       <span class="card-client">Exponential Education</span>

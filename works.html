@@ -77,6 +77,10 @@
 
   .hamburger { display: none; }
 
+  @media (min-width: 901px) {
+    .hamburger { display: none; }
+  }
+
   /* ── HERO ── */
   .hero {
     padding: 10rem 4rem 4rem;
@@ -338,10 +342,14 @@
       gap: 0;
       position: fixed;
       top: 0; left: 0; right: 0; bottom: 0;
+      width: 100%;
+      height: 100%;
+      min-height: 100vh;
       background: var(--charcoal);
       align-items: center;
       justify-content: center;
       z-index: 99;
+      overflow-y: auto;
     }
 
     .nav-links.open { display: flex; }
@@ -543,7 +551,7 @@
     </div>
   </div>
 
-  <!-- Expo Ed Carousel — Design
+  <!-- Expo Ed Carousel — Design -->
   <div class="media-card design" onclick="openImage('Screenshot 2026-05-14 at 4.54.43 pm.png')">
     <img src="Screenshot 2026-05-14 at 4.54.43 pm.png" alt="Exponential Education Instagram carousel">
     <div class="card-label">
@@ -553,7 +561,7 @@
         <span class="tag">Instagram</span>
       </div>
     </div>
-  </div> -->
+  </div>
 
 </section>
 
